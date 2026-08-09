@@ -1,11 +1,24 @@
 id = "gsx"
 name = "GSX"
-version = "0.1.0"
+version = "0.2.0"
 schema_version = 1
 authors = ["Noah Zoschke <noah@housecat.com>"]
 description = "GSX templating language support"
 repository = "https://github.com/nzoschke/zed-gsx"
 languages = ["languages/gsx"]
+capabilities = [
+  { kind = "process:exec", command = "*", args = ["version"] },
+  { kind = "process:exec", command = "*", args = ["env", "GOBIN", "GOPATH"] },
+  { kind = "process:exec", command = "*", args = ["install", "github.com/gsxhq/gsx/cmd/gsx@latest"] },
+]
+
+[language_servers.gsx]
+name = "GSX Language Server"
+language = "GSX"
+languages = ["GSX"]
+
+[language_servers.gsx.language_ids]
+"GSX" = "gsx"
 
 [grammars.gsx]
 repository = "https://github.com/gsxhq/tree-sitter-gsx"
