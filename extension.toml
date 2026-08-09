@@ -1,0 +1,12 @@
+id = "gsx"
+name = "GSX"
+version = "0.1.0"
+schema_version = 1
+authors = ["Noah Zoschke <noah@housecat.com>"]
+description = "GSX templating language support"
+repository = "https://github.com/nzoschke/zed-gsx"
+languages = ["languages/gsx"]
+
+[grammars.gsx]
+repository = "https://github.com/gsxhq/tree-sitter-gsx"
+rev = "46f85fb64adcefc6e057d2dcf05e9203b6c083a5"
